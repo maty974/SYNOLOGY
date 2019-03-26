@@ -1,9 +1,9 @@
 # SYNOLOGY
 
 
-### **All** scripts that will be made by wuseman is licensed under GPL Version 3 under this repository, feel free to share the cheatsheet anywhere & anytime
+##### **All** scripts that will be made by wuseman is licensed under GPL Version 3 under this repository, feel free to share the cheatsheet anywhere & anytime
 
-### A notice to all nerds. If you will copy the wiki and steal the real developers work will not make you a hacker.
+##### A notice to all nerds. If you will copy the wiki and steal the real developers work will not make you a hacker.
 
 #### Be careful, some commands may wipe DATA so read carefully please.
 
