@@ -10,8 +10,7 @@
 
 ##### Install various packages on your Synology NSA via OPKG:
 
-![Screenshot](misc/synology-opkg.gif)
-
+![Screenshot](misc/ezgif-2-c48da777e053.gif)
 
 # CHEATSHEET
 
@@ -708,18 +707,18 @@
      synozram
      synologconfgen
      
-REQUIREMENTS
+## REQUIREMENTS
 
 Synology NAS Device
  
-CONTACT
+## CONTACT
 
 If you have problems, questions, ideas or suggestions please contact me by posting to wuseman@nr1.nu
 
-WEB SITE
+## WEB SITE
 
 Visit my websites and profiles for the latest info and updated tools
 
 https://github.com/wuseman/ && https://nr1.nu && https://stackoverflow.com/users/9887151/wuseman
 
-END!
+## END!
