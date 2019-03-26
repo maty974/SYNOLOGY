@@ -1,196 +1,196 @@
 # SYNOLOGY
 
 
-#### **All** scripts that will be made by wuseman is licensed under GPL Version 3 under this repository, feel free to share the cheatsheet anywhere & anytime
+### **All** scripts that will be made by wuseman is licensed under GPL Version 3 under this repository, feel free to share the cheatsheet anywhere & anytime
 
-##### A notice to all nerds. If you will copy the wiki and steal the real developers work will not make you a hacker.
+### A notice to all nerds. If you will copy the wiki and steal the real developers work will not make you a hacker.
 
-## Be careful, some commands may wipe DATA so read carefully please.
+#### Be careful, some commands may wipe DATA so read carefully please.
 
 
-### Install various packages on your Synology NSA via OPKG:
+##### Install various packages on your Synology NSA via OPKG:
 
 ![Screenshot](misc/synology-opkg.gif)
 
 
 # CHEATSHEET
 
-## Print general info:
+#### Print general info:
 
-    synoservice --status
+      synoservice --status
 
-## Setup mail via cli:
+#### Setup mail via cli:
 
-    synosyslogmail
+      synosyslogmail
 
-## Check upgrades:
+#### Check upgrades:
 
-    synoupgrade --check 3
+      synoupgrade --check 3
 
-## Dump data about your nas:
+#### Dump data about your nas:
 
-   syno_system_dump
+     syno_system_dump
 
-## Print network info:
+#### Print network info:
 
-   synonet --show
+     synonet --show
 
-## Reset your Synology NAS (Settings Only)
+#### Reset your Synology NAS (Settings Only)
 
-   /usr/syno/sbin/./synodsdefault --reset
+     /usr/syno/sbin/./synodsdefault --reset
 
-## Reset your Synology Nas to Factory Default (OBS OBS OBS ALL DATA WILL BE WIPED)
+#### Reset your Synology Nas to Factory Default (OBS OBS OBS ALL DATA WILL BE WIPED)
 
-   /usr/syno/sbin/./synodsdefault --factory-default
+     /usr/syno/sbin/./synodsdefault --factory-default
 
-## Reinstall your Synology Nas Station, all data will be kept:
+#### Reinstall your Synology Nas Station, all data will be kept:
 
-   /usr/syno/sbin/./synodsdefault --reinstall; reboot
+     /usr/syno/sbin/./synodsdefault --reinstall; reboot
 
-## The proper way to restart SSHD of your NAS via cli:
+#### The proper way to restart SSHD of your NAS via cli:
 
-   synoservicectl --restart sshd
+     synoservicectl --restart sshd
 
-## List, uninstall or install a .spk package file (available locally)
+#### List, uninstall or install a .spk package file (available locally)
 
-    synopkg
+      synopkg
 
-## Install a set a networking and ELF binary debugging tools (and drop into a root session)
+#### Install a set a networking and ELF binary debugging tools (and drop into a root session)
 
-   synogear
+     synogear
 
-## Write and read an .ini style file with lines of key=value pairs
+#### Write and read an .ini style file with lines of key=value pairs
 
-   synosetkeyvalue
-   synogetkeyvalue
+     synosetkeyvalue
+     synogetkeyvalue
 
-## Shut down and power off the NAS (much like shutdown -h now)
+#### Shut down and power off the NAS (much like shutdown -h now)
 
-   synopoweroff
+     synopoweroff
 
-## Show installed packages
+#### Show installed packages
 
-   synopkg list | sed 's/: .*$//' 
+     synopkg list | sed 's/: .*$//' 
 
-## Uninstall a package
+#### Uninstall a package
 
-   sudo synopkg uninstall 
+     sudo synopkg uninstall 
 
-## Synology Shutdown and Poweroff Too
+#### Synology Shutdown and Poweroff Too
 
-   syno_poweroff_task
+     syno_poweroff_task
 
-## Set/establish password to local user
+#### Set/establish password to local user
 
-   synoauth local_username password
+     synoauth local_username password
 
-## Manage IP autoblock feature
+#### Manage IP autoblock feature
 
-   synoautoblock OPTIONS 
+     synoautoblock OPTIONS 
 
-## Manage blog feature
+#### Manage blog feature
 
-   synoblog_backup [-r|-b] p [-u username] [-o]
+     synoblog_backup [-r|-b] p [-u username] [-o]
 
-## Synology disk control device: something like /dev/hda or /dev/sda
+#### Synology disk control device: something like /dev/hda or /dev/sda
 
-   syno_disk_ctl OPTIONS DEVICE 
+     syno_disk_ctl OPTIONS DEVICE  
 
-## Synology clear .tbd-File Tool
+#### Synology clear .tbd-File Tool
 
-   SYNOClearTdb FILE 
+     SYNOClearTdb FILE 
 
-## Different ways to print various info about your NAS
+#### Different ways to print various info about your NAS
 
-   more /etc.defaults/VERSION 
-   cat /etc/synoinfo.conf
-   cat /proc/cmdline
-   synoshare --enum ALL 
-   synonet --show 
-   synodisk --enum 
-   synospace --enum -a 
+     more /etc.defaults/VERSION 
+     cat /etc/synoinfo.conf
+     cat /proc/cmdline
+     synoshare --enum ALL 
+     synonet --show 
+     synodisk --enum 
+     synospace --enum -a 
 
-## Restart index
+#### Restart index
 
-   synoservicectl --restart synoindexd
+     synoservicectl --restart synoindexd
 
-## Check for upgrades
+#### Check for upgrades
 
-   sudo synoupgrade --check
+     sudo synoupgrade --check
 
-## Restart webserver
+#### Restart webserver
 
-   /usr/syno/sbin/synoservicecfg --restart httpd-user 
-   /usr/syno/sbin/synoservicectl --restart pkgctl-WebStation
+     /usr/syno/sbin/synoservicecfg --restart httpd-user 
+     /usr/syno/sbin/synoservicectl --restart pkgctl-WebStation
 
-## Generate a list for what you can control
+#### Generate a list for what you can control
 
-   /usr/syno/sbin/synoservice --list
+     /usr/syno/sbin/synoservice --list
 
-## DSM API - Provide DSM information
+#### DSM API - Provide DSM information
 
-   syno dsm getInfo --pretty 
+     syno dsm getInfo --pretty 
 
-## File Station API - Provide File Station information
+#### File Station API - Provide File Station information
 
-   syno fs getInfo --pretty 
+     syno fs getInfo --pretty 
 
-## File Station API - Enumerate files in a given folder
+#### File Station API - Enumerate files in a given folder
 
-   syno fs listFiles --payload '{"folder_path":"/path/to/folder"}' --pretty 
+     syno fs listFiles --payload '{"folder_path":"/path/to/folder"}' --pretty 
 
-## Download Station API - List download tasks
+#### Download Station API - List download tasks
 
-   syno dl listFiles --payload '{"limit":5, "offset":10}' --pretty 
+     syno dl listFiles --payload '{"limit":5, "offset":10}' --pretty 
 
-## Download Station API - Create a download task
+#### Download Station API - Create a download task
 
-   syno dl createTask --payload '{"uri":"https://link"}'
+     syno dl createTask --payload '{"uri":"https://link"}'
 
-## Audio Station API - Search a song
+#### Audio Station API - Search a song
 
-   syno as searchSong --payload '{"title":"my_title_song"}' --pretty
+     syno as searchSong --payload '{"title":"my_title_song"}' --pretty
 
-## Video Station API - List movies
+#### Video Station API - List movies
 
-   syno vs listMovies --payload '{"limit":5}' --pretty
+     syno vs listMovies --payload '{"limit":5}' --pretty
 
-## Video Station DTV API - List channels
+#### Video Station DTV API - List channels
 
-   syno dtv listChannels --payload '{"limit":1}' --pretty 
+     syno dtv listChannels --payload '{"limit":1}' --pretty 
 
-## Surveillance Station API - Get camera information
+#### Surveillance Station API - Get camera information
 
-   syno ss getInfoCamera --payload '{"cameraIds":8}' --pretty 
+     syno ss getInfoCamera --payload '{"cameraIds":8}' --pretty 
 
-## Restart, enable, stop samba
+#### Restart, enable, stop samba
 
-  /usr/syno/etc/rc.sysv/S80samba.sh --help
+     /usr/syno/etc/rc.sysv/S80samba.sh --help
 
-## Get synology date
+#### Get synology date
 
-   synodate --getSysDate
+     synodate --getSysDate
 
-## Printer stuff
+#### Printer stuff
 
-  synoprint
+    synoprint
 
-## Update index older
+#### Update index older
 
-  indexfolder --type={SHARE_CREATE|SHARE_REMOVE} --share=<SHARED_FOLDER> --share_path=<SHARED_FOLDER>
+    indexfolder --type={SHARE_CREATE|SHARE_REMOVE} --share=<SHARED_FOLDER> --share_path=<SHARED_FOLDER>
 
-## Start mediaserver
+#### Start mediaserver
 
-  /usr/syno/bin/mediaserver.sh start
+    /usr/syno/bin/mediaserver.sh start
 
-## CAREFUL, KILLING NAS
+#### CAREFUL, KILLING NAS
 
-  servicetool --get-service-volume download 
+    servicetool --get-service-volume download 
 
-## Get 2FA key if lost
+#### Get 2FA key if lost
 
-   ssh root@nas cat /usr/syno/etc/preference/wuseman/google_authenticator
+    ssh root@nas cat /usr/syno/etc/preference/wuseman/google_authenticator
 
-## List disk info on a very fancy way
+#### List disk info on a very fancy way
 
-  dhm_tool -s 
+    dhm_tool -s 
