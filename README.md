@@ -10,7 +10,7 @@
 
 ##### Install various packages on your Synology NAS via OPKG (script can be found [here](https://github.com/wuseman/SYNOLOGY/blob/master/scripts/wsynopkg.sh))
 
-![Screenshot](misc/ezgif-2-c48da777e053.gif 
+![Screenshot](misc/ezgif-2-c48da777e053.gif)
 
 # CHEATSHEET
 
